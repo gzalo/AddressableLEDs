@@ -1,0 +1,12 @@
+all: effects.exe
+
+effects.exe: effects.cpp serialPort.h
+	g++ effects.cpp -o effects.exe -Wall -O2 -lSDL2
+	
+run: effects.exe
+	effects
+	
+clean:
+	rm effects.exe
+	
+PHONY: run
